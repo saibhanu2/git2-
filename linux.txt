@@ -1,0 +1,131 @@
+                    Linux 
+
+
+* Everything is file in Linux
+
+1.----------------commands ------------------------------------------------------------------------
+
+.whoami    >> to know whom ur are
+.uname     >>to know which os ur
+.cd        >> change direct (change from one place to another)
+.pwd       >> to know where ur
+.touch     >> to create file 
+.mkdir     >> to crate folder
+.ls        >> list
+.cd ../    >> to come back 1 step
+..cd ~     >> to come back to home
+.cat       >> to see or open file
+.nano      >> to edit
+.mv        >> to move files to folder or another file
+.cp        >> to copy
+.rm        >> remove or delete
+.clear     >> to clear the page
+.stat(or) ls -l >> to check status  
+.rm - r     >> to delete 
+.vi         >> to edit
+.chmod      >> change permission of file ,link,directory
+.man        >> to get manual of command. -> man ls
+.--help     >> help of command  -> ls --help
+.apropos    >> uses when we dont know command .ex: apropos copy
+.redirection >> ls >s1 ,ls >>s1
+.ifconfig    >> to check ipaddress
+.autoremove  >> to remove unwanted files
+2.-----------------File Structures ---------------------------------------------------------------------
+. it starts with /
+$ root directory   >> it is a superdirectory
+$ bin              >> it contains all commands doesnt effect system
+$ sbin             >> contains commands which effect system
+$ boot             >> informaion or used for system starts
+$ dev              >> information related to device (sda1,sda2 ) 
+$ etc              >> configutartion files (useradd.config)
+$ mnt              >> mounting (pendrives)
+$ lib              >> to execute files ,proprties of softwares
+$ media            >> media files
+$ opt              >> third party apps
+$proc              >> processes related
+$ snap             >>run and execute app and programme
+$ sis              >> system related 
+$ usr              >> user related
+$ tmp              >> temporary
+
+3. ------------Permissions ---------------------------------------------------------------------
+@ -  > File 
+@ d  > directory
+@ l  > link
+  
+.rwxrwxrwx
+first3=user
+second3=group
+third3=others
+r=read >4
+w=write >2
+x=execute >1
+
+
+.chmod number name of file >> chmod 777 s1
+.chmod + file name >> to add permission 
+.chmod - file name >> to remove premission
+ 
+
+4.------------WildCard----------------------------
+. *    >> case senitive and count
+. ?    
+.[]   >> takes only single count
+.redirection
+
+5.------------pipe and grep------------------------------------------------------
+.pipe (|) >used for multi commands,cat s1 | sort |uniq |wc 
+
+.grep >> to check particular item in file >grep "sai" s2 -n -v -i 
+
+> cat s1 | grep "virat" | tee s2 | wc
+
+-n > count number
+-v > except that word
+-i > no case sensitive
+tee or > -> copy
+
+6.----------multi user---------------------------------
+syntax >adduser name
+>sudo usermod -aG dip name -> to add user to group
+>sudo userdel -r  name -> to delete user
+
+7.----------Installing softwares---------------------------------------
+.apt 
+.apt-get     
+syntax
+  1.sudo apt update 
+  2.sudo apt install name
+  3.sudo apt remove name
+  4.sudo apt upgrade
+  
+8.------------Text Editing------------------------------
+   1.nano >> nano s2 -v
+   2.vi
+   3.vim   
+   
+   -v >> view mode
+9. ------system logs-------------
+10.----------networks ---------------
+ 
+  1.ping
+  2.DNS(domain name system)
+  3.lo (loopback)
+  4.not  persistent > not permenant
+  syntax>>ifconfig lo down
+  
+11----------package management------------------
+ .update >> sudo apt update
+ install >> sudo apt install
+ upgrade >> sudo apt upgrade
+ 
+ 12 --------resource viewing----------
+  .$ >> as user
+  .# >> as root
+  
+  1.df(disk free)
+  2.du (disk usage)
+  3.free
+  
+13------------shell scripting-----------
+
